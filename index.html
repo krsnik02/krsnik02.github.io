@@ -1,287 +1,419 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Teaching Portfolio - Gwen Hartshaw</title>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px;
+            top: 43px;
+            bottom: 0;
+            height: inherit;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>Teaching Portfolio - Gwen Hartshaw</h2>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1"
+                href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-theme-l1">Teaching Portfolio</a>
+            <div class="w3-bar-item">by Gwen Hartshaw</div>
+        </div>
+    </div>
 
-    <article>
-        <h1>Contents</h1>
-        <ol>
-            <li><a href="#stmt">Personal Statement and CV</a></li>
-            <li><a href="#phil">Philosophy</a></li>
-            <li><a href="#resp">Responsibilities</a></li>
-            <li><a href="#mat">Materials</a></li>
-            <li><a href="#eval">Student Evaluations</a></li>
-        </ol>
-    </article>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Contents</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#statement">Personal Statement</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#philosophy">Philosophy</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#responsibilities">Responsibilities</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#materials">Materials</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#evaluations">Student Evaluations</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#remarks">Final Remarks</a>
+    </nav>
 
-    <article id="stmt">
-        <h1>Personal Statement and CV</h1>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
 
-        <p>I am honored to have been nominated for the Outstanding TA Award for 2022. I feel that I am a good
-            candidate for this award because I have consistently gotten feedback from my students on how they felt
-            I was a good teacher and that I helped them learn the material and pass the courses I have taught. I
-            greatly enjoy teaching and plan to go on to be a professor after graduation so this feedback has been quite
-            encouraging. Thank you for considering me for this award. - Gwen Hartshaw</p>
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
 
-        <a href="cv.pdf">Cirruculum Vitae</a>
-    </article>
+        <div id="statement" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1>Personal Statement</h1>
 
-    <article id="phil">
-        <h1>Teaching Philosophy</h1>
+                <p>I am honored to have been nominated for the Outstanding TA Award for 2022. I feel that I am a good
+                    candidate for this award because I have consistently gotten feedback from my students on how they
+                    felt
+                    I was a good teacher and that I helped them learn the material and pass the courses I have taught. I
+                    greatly enjoy teaching and plan to go on to be a professor after graduation so this feedback has
+                    been quite
+                    encouraging. Thank you for considering me for this award.</p>
 
-        <p>As an instructor I strive to encourage students to reach their full potential to understand and use the
-            material I teach in my classes. Often students come into my classes with the preconception that physics (and
-            math) are hard and that they are "bad at it" - my goal is for them to believe that they <em>can</em>
-            understand and use physics by the end of the course. One way in which I try to encourage this mindset
-            is to give what is called wise critism - that is when talking to students about their work I try to
-            emphasise what they are doing correctly rather then focusing on what they have gotten wrong.</p>
+                <h3><a href="cv.pdf">Cirruculum Vitae</a></h3>
+            </div>
+        </div>
 
-        <p>I try to structure my classes such that for the majority of the class period the students are working
-            on problems in small groups. Math and physics are learned by <em>doing problems</em>, not just listening
-            to or watching someone else talk about the concepts. By having the students work in groups
-            those students who are doing well get experience explaining the concepts (which helps strengthen their
-            understanding) and those that are struggling can have the material explained to them by someone who
-            has a similar background (leading to a more comprehensable explanation). Then, if any group still gets
-            stuck on a problem I am present to lead the students along the process toward the right answer.</p>
+        <div id="philosophy" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1>Teaching Philosophy</h1>
 
-        <p>It is important while constructing and working with these groups to make sure that the groups work well
-            together and do not lead to a single student doing all the work and then just telling the other group
-            members the answers. Another issue which could arise is for a student to be excluded by a group (due to a
-            language barrier or any other factors). Careful construction of groups (based on responses to a short
-            survey and math assessment given on the first day of class) and a grading scheme made to give points
-            for good group work reduce the chances of these problems occuring.</p>
-    </article>
-
-    <article id="resp">
-        <h1>Teaching Responsibilities</h1>
-
-        <p>I have held a number of teaching positions at Syracuse University for both the Physics and Mathematics
-            departments. Over the past 4 years I have taught or was a TA for the following classes:
-        <ul>
-            <li>
-                <p>MAT 295 - Calculus I<br />Fall 2018, Fall 2019<br /><em>Recitation TA</em>
+                <p>As an instructor I strive to encourage students to reach their full potential to understand and use
+                    the material I teach in my classes. Often students come into my classes with the preconception that
+                    physics (and math) are hard and that they are "bad at it" - my goal is for them to believe that they
+                    <em>can</em> understand and use physics by the end of the course. One way in which I try to
+                    encourage this mindset is to give what is called wise critism - that is when talking to students
+                    about their work I try to emphasise what they are doing correctly rather then focusing on what they
+                    have gotten wrong.
                 </p>
-            </li>
-            <li>
-                <p>MAT 284 - Buisness Calculus<br />Spring 2019<br /><em>Recitation TA</em></p>
-            </li>
-            <li>
-                <p>MAT 285 - Life Sciences Calculus I<br />Spring 2020<br /><em>Teaching Instructor</em></p>
-            </li>
-            <li>
-                <p>PHY 212 - General Physics II<br />Spring 2020, Fall 2021, Spring 2021, Fall
-                    2022<br /><em>Recitation TA</em></p>
-            </li>
-            <li>
-                <p>PHY 101 - Major Concepts of Physics I<br />Summer 2021<br /><em>Primary Instructor</em></p>
-            </li>
-        </ul>
-        </p>
 
-        <p>The courses where my role was Recitation TA (MAT 295, MAT 284, and PHY 212) were all large lecture
-            courses.
-            For these courses I was responsible for 2-5 recitation sections. For the bulk of these recitations I
-            would
-            have students work on problems in small groups and I would go around an help them when they got stuck;
-            these
-            worksheets were jointly written by all of the TA's for the course. The two math courses also had short
-            weekly quizzes given at the start of recitations - also jointly written by me and the other TA's and
-            graded
-            by me. Finally I was responsible for helping proctor and grade exams for the courses.
-        </p>
+                <p>I try to structure my classes such that for the majority of the class period the students are working
+                    on problems in small groups. Math and physics are learned by <em>doing problems</em>, not just
+                    listening to or watching someone else talk about the concepts. By having the students work in groups
+                    those students who are doing well get experience explaining the concepts (which helps strengthen
+                    their understanding) and those that are struggling can have the material explained to them by
+                    someone who has a similar background (leading to a more comprehensable explanation). Then, if any
+                    group still gets stuck on a problem I am present to lead the students along the process toward the
+                    right answer.</p>
 
-        <p>For MAT 285 I have put my role as Teaching Instructor as I was the instructor for one section working
-            under a
-            head instructor. The head instructor prepared the syllabus, selected the textbook, determined the course
-            schedule, and set the homework and I was responsible for all other duties. These included preparing and
-            giving lectures as well as writing and grading tests and quizzes.
-        </p>
+                <p>It is important while constructing and working with these groups to make sure that the groups work
+                    well together and do not lead to a single student doing all the work and then just telling the other
+                    group members the answers. Another issue which could arise is for a student to be excluded by a
+                    group (due to a language barrier or any other factors). Careful construction of groups (based on
+                    responses to a short survey and math assessment given on the first day of class) and a grading
+                    scheme made to give points for good group work reduce the chances of these problems occuring.</p>
+            </div>
+        </div>
 
-        <p>Finally, I was the Primary Instructor for the summer section of PHY 101 and was fully responsible for all
-            parts of the course. I wrote the syllabus, selected the textbook, gave lectures, assigned and graded
-            homework, and wrote and graded "quizzams" (an assessment somewhere between a quiz and an exam). This
-            course
-            also has a lab component and I worked with a TA who prepared and administered these labs.
-        </p>
-    </article>
+        <div id="responsibilities" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1>Teaching Responsibilities</h1>
 
-    <article id="mat">
-        <h1>Teaching Materials</h1>
-        <p>Below are linked a variety of materials I prepared for the courses I have taught. Not all materials
-            written by me are provided for all courses. (Note: some materials might list my deadname as they were made
-            before I publically transitioned.)
-        </p>
+                <p>I have held a number of teaching positions at Syracuse University for both the Physics and
+                    Mathematics
+                    departments. Over the past 4 years I have taught or was a TA for the following classes:
+                <ul>
+                    <li>
+                        <p>MAT 295 - Calculus I<br />Fall 2018, Fall 2019<br /><em>Recitation TA</em>
+                        </p>
+                    </li>
+                    <li>
+                        <p>MAT 284 - Buisness Calculus<br />Spring 2019<br /><em>Recitation TA</em></p>
+                    </li>
+                    <li>
+                        <p>MAT 285 - Life Sciences Calculus I<br />Spring 2020<br /><em>Teaching Instructor</em></p>
+                    </li>
+                    <li>
+                        <p>PHY 212 - General Physics II<br />Spring 2020, Fall 2021, Spring 2021, Fall
+                            2022<br /><em>Recitation TA</em></p>
+                    </li>
+                    <li>
+                        <p>PHY 101 - Major Concepts of Physics I<br />Summer 2021<br /><em>Primary Instructor</em></p>
+                    </li>
+                </ul>
+                </p>
 
-        <h3>MAT 285 - Life Sciences Calculus I</h3>
-        <h4>Quizzes</h4>
-        <ul>
-            <li><a href="materials/MAT285/MAT_285_Quiz_1.pdf">Quiz 1</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_2.pdf">Quiz 2</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_3.pdf">Quiz 3</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_4.pdf">Quiz 4</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_5.pdf">Quiz 5</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_6.pdf">Quiz 6</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_7.pdf">Quiz 7</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_8.pdf">Quiz 8</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_9.pdf">Quiz 9</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_10.pdf">Quiz 10</a></li>
-            <li><a href="materials/MAT285/MAT_285_Quiz_11.pdf">Quiz 11</a></li>
-        </ul>
-        <h4>Tests</h4>
-        <ul>
-            <li><a href="materials/MAT285/MAT_285_Test_1.pdf">Test 1</a></li>
-            <li><a href="materials/MAT285/MAT_285_Test_2.pdf">Test 2</a></li>
-            <li><a href="materials/MAT285/MAT_285_Test_3.pdf">Test 3</a></li>
-            <li><a href="materials/MAT285/MAT_285_Final.pdf">Final</a></li>
-        </ul>
+                <p>The courses where my role was Recitation TA (MAT 295, MAT 284, and PHY 212) were all large lecture
+                    courses.
+                    For these courses I was responsible for 2-5 recitation sections. For the bulk of these recitations I
+                    would
+                    have students work on problems in small groups and I would go around an help them when they got
+                    stuck;
+                    these
+                    worksheets were jointly written by all of the TA's for the course. The two math courses also had
+                    short
+                    weekly quizzes given at the start of recitations - also jointly written by me and the other TA's and
+                    graded
+                    by me. Finally I was responsible for helping proctor and grade exams for the courses.
+                </p>
 
-        <h3>PHY 212 - General Physics II</h3>
-        <h4>Practice Quizzams</h4>
-        <ul>
-            <li><a href="materials/PHY212/Practice Quizzam 3.pdf">Practice Quizzam 3</a>
-                (<a href="materials/PHY212/practice quizzam 3 solutions.pdf">solutions</a>)</li>
-            <li><a href="materials/PHY212/Practice Quizzam 5.pdf">Practice Quizzam 5</a>
-                (<a href="materials/PHY212/practice quizzam 5 solutions.pdf">solutions</a>)</li>
-            <li><a href="materials/PHY212/Practice Quizzam 6.pdf">Practice Quizzam 6</a>
-                (<a href="materials/PHY212/practice quizzam 6 solutions.pdf">solutions</a>)</li>
-        </ul>
+                <p>For MAT 285 I have put my role as Teaching Instructor as I was the instructor for one section working
+                    under a
+                    head instructor. The head instructor prepared the syllabus, selected the textbook, determined the
+                    course
+                    schedule, and set the homework and I was responsible for all other duties. These included preparing
+                    and
+                    giving lectures as well as writing and grading tests and quizzes.
+                </p>
 
-        <h3>PHY 101 - General Concepts of Physics I</h3>
-        <h4>Syllabus</h4>
-        <ul>
-            <li><a href="materials/PHY101/Syllabus.pdf">Syllabus</a></li>
-        </ul>
-        <h4>Quizzams</h4>
-        <ul>
-            <li><a href="materials/PHY101/Quizzam 1.pdf">Quizzam 1</a></li>
-            <li><a href="materials/PHY101/Quizzam 2.pdf">Quizzam 2</a></li>
-            <li><a href="materials/PHY101/Quizzam 3.pdf">Quizzam 3</a></li>
-            <li><a href="materials/PHY101/Quizzam 4.pdf">Quizzam 4</a></li>
-            <li><a href="materials/PHY101/Quizzam 5.pdf">Quizzam 5</a></li>
-            <li><a href="materials/PHY101/Quizzam 6.pdf">Quizzam 6</a></li>
-        </ul>
-        <h4>Lecture Notes</h4>
-        These lectures were presented over zoom and then the notes written during the lecture were uploaded.
-        <ul>
-            <li><a href="materials/PHY101/Chapter 1 Introduction.pdf">Lecture 1 - Introduction</a></li>
-            <li><a href="materials/PHY101/Chapter 2 1D Kinematics.pdf">Lecture 2 - 1D Kinematics</a></li>
-            <li><a href="materials/PHY101/Chapter 3 - 2D Kinematics.pdf">Lecture 3 - 2D Kinematics</a></li>
-            <li><a href="materials/PHY101/Chapter 4 Dynamics.pdf">Lecture 4 - Dynamics</a></li>
-            <li><a href="materials/PHY101/Chapter 5 Common Forces.pdf">Lecture 5 - Common Forces</a></li>
-            <li><a href="materials/PHY101/Chapter 6 Circular Motion & Gravity.pdf">Lecture 6 - Circular Motion &
-                    Gravity</a></li>
-            <li><a href="materials/PHY101/Chapter 7 Work & Energy.pdf">Lecture 7 - Work & Energy</a></li>
-            <li><a href="materials/PHY101/Chapter 8 Momentum & Collisions.pdf">Lecture 8 - Momentum & Collisions</a>
-            </li>
-            <li><a href="materials/PHY101/Chapter 9 Statics & Torque.pdf">Lecture 9 - Statics & Torque</a></li>
-            <li><a href="materials/PHY101/Chapter 10 Rotational Motion.pdf">Lecture 10 - Rotational Motion</a></li>
-            <li><a href="materials/PHY101/3D Rotation.pdf">Lecture 11 - 3D Rotation</a>)</li>
-        </ul>
-    </article>
+                <p>Finally, I was the Primary Instructor for the summer section of PHY 101 and was fully responsible for
+                    all
+                    parts of the course. I wrote the syllabus, selected the textbook, gave lectures, assigned and graded
+                    homework, and wrote and graded "quizzams" (an assessment somewhere between a quiz and an exam). This
+                    course
+                    also has a lab component and I worked with a TA who prepared and administered these labs.
+                </p>
+            </div>
+        </div>
 
-    <article id="eval">
-        <h1>Student Evaluations</h1>
-        <p>(Note: some evaluations list my deadname as they were made before I publically transitioned.)</p>
+        <div id="materials" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1>Teaching Materials</h1>
+                <p>Below are linked a variety of materials I prepared for the courses I have taught. Not all materials
+                    written by me are provided for all courses. (Note: some materials might list my deadname as they
+                    were made
+                    before I publically transitioned.)
+                </p>
 
-        <h2>Fall 2018 - Calculus I</h2>
-        <ul>
-            <li><a
-                    href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M101 (Calculus I).pdf">MAT
-                    295 - section M101</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M104 (Calculus I).pdf">MAT
-                    295 - section M104</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M107 (Calculus I).pdf">MAT
-                    295 - section M107</a> (recitation)</li>
-        </ul>
+                <h3>MAT 285 - Life Sciences Calculus I</h3>
+                <h4>Quizzes</h4>
+                <ul>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_1.pdf">Quiz 1</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_2.pdf">Quiz 2</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_3.pdf">Quiz 3</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_4.pdf">Quiz 4</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_5.pdf">Quiz 5</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_6.pdf">Quiz 6</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_7.pdf">Quiz 7</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_8.pdf">Quiz 8</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_9.pdf">Quiz 9</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_10.pdf">Quiz 10</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Quiz_11.pdf">Quiz 11</a></li>
+                </ul>
+                <h4>Tests</h4>
+                <ul>
+                    <li><a href="materials/MAT285/MAT_285_Test_1.pdf">Test 1</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Test_2.pdf">Test 2</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Test_3.pdf">Test 3</a></li>
+                    <li><a href="materials/MAT285/MAT_285_Final.pdf">Final</a></li>
+                </ul>
 
-        <h2>Spring 2019 - Business Calculus</h2>
-        <ul>
-            <li><a
-                    href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M207 (Buisness Calculus).pdf">MAT
-                    284 - section M207</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M208 (Buisness Calculus).pdf">MAT
-                    284 - section M208</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M209 (Buisness Calculus).pdf">MAT
-                    284 - section M209</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M404 (Buisness Calculus).pdf">MAT
-                    284 - section M404</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M406 (Buisness Calculus).pdf">MAT
-                    284 - section M406</a> (recitation)</li>
-        </ul>
+                <h3>PHY 212 - General Physics II</h3>
+                <h4>Practice Quizzams</h4>
+                <ul>
+                    <li><a href="materials/PHY212/Practice Quizzam 3.pdf">Practice Quizzam 3</a>
+                        (<a href="materials/PHY212/practice quizzam 3 solutions.pdf">solutions</a>)</li>
+                    <li><a href="materials/PHY212/Practice Quizzam 5.pdf">Practice Quizzam 5</a>
+                        (<a href="materials/PHY212/practice quizzam 5 solutions.pdf">solutions</a>)</li>
+                    <li><a href="materials/PHY212/Practice Quizzam 6.pdf">Practice Quizzam 6</a>
+                        (<a href="materials/PHY212/practice quizzam 6 solutions.pdf">solutions</a>)</li>
+                </ul>
 
-        <h2>Fall 2019 - Calculus I</h2>
-        <ul>
-            <li><a
-                    href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M001 (Calculus I).pdf">MAT
-                    295 - section M001</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M003 (Calculus I).pdf">MAT
-                    295 - section M003</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M103 (Calculus I).pdf">MAT
-                    295 - section M103</a> (recitation)</li>
-            <li><a
-                    href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M105 (Calculus I).pdf">MAT
-                    295 - section M105</a> (recitation)</li>
-        </ul>
+                <h3>PHY 101 - General Concepts of Physics I</h3>
+                <h4>Syllabus</h4>
+                <ul>
+                    <li><a href="materials/PHY101/Syllabus.pdf">Syllabus</a></li>
+                </ul>
+                <h4>Quizzams</h4>
+                <ul>
+                    <li><a href="materials/PHY101/Quizzam 1.pdf">Quizzam 1</a></li>
+                    <li><a href="materials/PHY101/Quizzam 2.pdf">Quizzam 2</a></li>
+                    <li><a href="materials/PHY101/Quizzam 3.pdf">Quizzam 3</a></li>
+                    <li><a href="materials/PHY101/Quizzam 4.pdf">Quizzam 4</a></li>
+                    <li><a href="materials/PHY101/Quizzam 5.pdf">Quizzam 5</a></li>
+                    <li><a href="materials/PHY101/Quizzam 6.pdf">Quizzam 6</a></li>
+                </ul>
+                <h4>Lecture Notes</h4>
+                These lectures were presented over zoom and then the notes written during the lecture were uploaded.
+                <ul>
+                    <li><a href="materials/PHY101/Chapter 1 Introduction.pdf">Lecture 1 - Introduction</a></li>
+                    <li><a href="materials/PHY101/Chapter 2 1D Kinematics.pdf">Lecture 2 - 1D Kinematics</a></li>
+                    <li><a href="materials/PHY101/Chapter 3 - 2D Kinematics.pdf">Lecture 3 - 2D Kinematics</a></li>
+                    <li><a href="materials/PHY101/Chapter 4 Dynamics.pdf">Lecture 4 - Dynamics</a></li>
+                    <li><a href="materials/PHY101/Chapter 5 Common Forces.pdf">Lecture 5 - Common Forces</a></li>
+                    <li><a href="materials/PHY101/Chapter 6 Circular Motion & Gravity.pdf">Lecture 6 - Circular Motion &
+                            Gravity</a></li>
+                    <li><a href="materials/PHY101/Chapter 7 Work & Energy.pdf">Lecture 7 - Work & Energy</a></li>
+                    <li><a href="materials/PHY101/Chapter 8 Momentum & Collisions.pdf">Lecture 8 - Momentum &
+                            Collisions</a>
+                    </li>
+                    <li><a href="materials/PHY101/Chapter 9 Statics & Torque.pdf">Lecture 9 - Statics & Torque</a></li>
+                    <li><a href="materials/PHY101/Chapter 10 Rotational Motion.pdf">Lecture 10 - Rotational Motion</a>
+                    </li>
+                    <li><a href="materials/PHY101/3D Rotation.pdf">Lecture 11 - 3D Rotation</a>)</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Spring 2020 - Life Sciences Calculus I</h2>
-        <p>Unfortunately, I have misplaced my course evaluations for this semester.</p>
-        <ul>
-            <li>MAT 285 (lecture)</li>
-        </ul>
+        <div id="evaluations" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h1>Student Evaluations</h1>
+                <p>(Note: some evaluations list my deadname as they were made before I publically transitioned.)</p>
 
-        <h2>Fall 2020 - General Physics II</h2>
-        <p>These recitation sections were hybrid sessions and jointly TA'd by me and one other TA. I was there
-            for in-person attendence and also on the Zoom while the other TA lead the Zoom session.
-        </p>
-        <ul>
-            <li><a href="evaluations/10950.1211PHY.212.M004.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M004</a> (recitation)</li>
-            <li><a href="evaluations/10953.1211PHY.212.M007.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M007</a> (recitation)</li>
-            <li><a href="evaluations/10954.1211PHY.212.M008.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M008</a> (recitation)</li>
-            <li><a href="evaluations/11529.1211PHY.212.M011.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M011</a> (recitation)</li>
-        </ul>
+                <h3>Fall 2018 - Calculus I</h3>
+                <ul>
+                    <li><a
+                            href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M101 (Calculus I).pdf">MAT
+                            295 - section M101</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M104 (Calculus I).pdf">MAT
+                            295 - section M104</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Fall_2018_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M107 (Calculus I).pdf">MAT
+                            295 - section M107</a> (recitation)</li>
+                </ul>
 
-        <h2>Spring 2021 - General Physics II</h2>
-        <ul>
-            <li><a href="evaluations/30692.1212PHY.212.M005.SPRING21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M005</a> (recitation)</li>
-            <li><a href="evaluations/30693.1212PHY.212.M006.SPRING21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M006</a> (recitation)</li>
-        </ul>
+                <h3>Spring 2019 - Business Calculus</h3>
+                <ul>
+                    <li><a
+                            href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M207 (Business Calculus).pdf">MAT
+                            284 - section M207</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M208 (Business Calculus).pdf">MAT
+                            284 - section M208</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M209 (Business Calculus).pdf">MAT
+                            284 - section M209</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M404 (Business Calculus).pdf">MAT
+                            284 - section M404</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Spring_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT284 Section M406 (Business Calculus).pdf">MAT
+                            284 - section M406</a> (recitation)</li>
+                </ul>
 
-        <h2>Summer 2021 - Major Concepts of Physics I</h2>
-        <ul>
-            <li><a href="evaluations/72228.1213PHY.101.M800.SUMMER21.MajorConceptsofPhysicsI_GwenhwyfarHartshaw.pdf">PHY
-                    101 - Section M800</a> (lecture)</li>
-        </ul>
+                <h3>Fall 2019 - Calculus I</h3>
+                <ul>
+                    <li><a
+                            href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M001 (Calculus I).pdf">MAT
+                            295 - section M001</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M003 (Calculus I).pdf">MAT
+                            295 - section M003</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M103 (Calculus I).pdf">MAT
+                            295 - section M103</a> (recitation)</li>
+                    <li><a
+                            href="evaluations/Fall_2019_Course_Evaluations_/MAT_Instructor Hartshaw,Garrett Evan, Class_ MAT295 Section M105 (Calculus I).pdf">MAT
+                            295 - section M105</a> (recitation)</li>
+                </ul>
 
-        <h2>Fall 2021 - General Physics II</h2>
-        <ul>
-            <li><a href="evaluations/10939.1211PHY.212.M007.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M007</a> (recitation)</li>
-            <li><a href="evaluations/10940.1211PHY.212.M008.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M008</a> (recitation)</li>
-            <li><a href="evaluations/11300.1211PHY.212.M009.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY 212 -
-                    section M009</a> (recitation)</li>
-        </ul>
-    </article>
+                <h3>Spring 2020 - Life Sciences Calculus I</h3>
+                <p>Unfortunately, I have misplaced my course evaluations for this semester.</p>
+                <ul>
+                    <li>MAT 285 (lecture)</li>
+                </ul>
+
+                <h3>Fall 2020 - General Physics II</h3>
+                <p>These recitation sections were hybrid sessions and jointly TA'd by me and one other TA. I was there
+                    for in-person attendence and also on the Zoom while the other TA lead the Zoom session.
+                </p>
+                <ul>
+                    <li><a href="evaluations/10950.1211PHY.212.M004.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M004</a> (recitation)</li>
+                    <li><a href="evaluations/10953.1211PHY.212.M007.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M007</a> (recitation)</li>
+                    <li><a href="evaluations/10954.1211PHY.212.M008.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M008</a> (recitation)</li>
+                    <li><a href="evaluations/11529.1211PHY.212.M011.FALL20.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M011</a> (recitation)</li>
+                </ul>
+
+                <h3>Spring 2021 - General Physics II</h3>
+                <ul>
+                    <li><a href="evaluations/30692.1212PHY.212.M005.SPRING21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M005</a> (recitation)</li>
+                    <li><a href="evaluations/30693.1212PHY.212.M006.SPRING21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M006</a> (recitation)</li>
+                </ul>
+
+                <h3>Summer 2021 - Major Concepts of Physics I</h3>
+                <ul>
+                    <li><a
+                            href="evaluations/72228.1213PHY.101.M800.SUMMER21.MajorConceptsofPhysicsI_GwenhwyfarHartshaw.pdf">PHY
+                            101 - Section M800</a> (lecture)</li>
+                </ul>
+
+                <h3>Fall 2021 - General Physics II</h3>
+                <ul>
+                    <li><a href="evaluations/10939.1211PHY.212.M007.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M007</a> (recitation)</li>
+                    <li><a href="evaluations/10940.1211PHY.212.M008.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M008</a> (recitation)</li>
+                    <li><a href="evaluations/11300.1211PHY.212.M009.FALL21.GeneralPhysicsII_GwenhwyfarHartshaw.pdf">PHY
+                            212 -
+                            section M009</a> (recitation)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="remarks" class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+                <h2>Final Remarks</h2>
+                <p>I have consistently been given good student evaluations which has been highly encouraging. As
+                    mentioned in my
+                    personal statement I hope to go on to be a professor after graduation so am relieved that it
+                    seems I will
+                    likely be a good one. Over the years I have cotinually tried to improve my teaching and believe
+                    that I have
+                    succeeded in this goal. With regards to teaching materials I feel that while those I wrote when
+                    I first
+                    started teaching were good they have only improved with time and experience. It wish that my
+                    effort to be a
+                    good teacher has been readily apparent and would like to thank the university for considering me
+                    for this
+                    years Outstanding TA Award.
+                </p>
+            </div>
+        </div>
+
+        <footer id="myFooter">
+            <div class="w3-container w3-theme-l1">
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </div>
+        </footer>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
 
 </body>
 
